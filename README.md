@@ -30,9 +30,6 @@ This project is an end-to-end **football analytics pipeline** that takes raw mat
 
 ---
 
-## 🛠️ Project Structure
-
-project/ │ ├── src/ │ ├── interpolate.py │ ├── assign_player_ball.py │ ├── camera_motion.py │ ├── perspective_transform.py │ ├── speed_distance.py │ └── utils.py │ ├── stubs/ │ └── (optional cached camera motion results) │ ├── input_videos/ │ └── match.mp4 │ ├── output_videos/ │ └── annotated_output.mp4 │ ├── requirements.txt ├── README.md └── .gitignore
 
 ## 🧪 Requirements
 
@@ -45,3 +42,43 @@ project/ │ ├── src/ │ ├── interpolate.py │ ├── assign_pl
 - torch (for PyTorch models, if used for detection)
 - pickle (standard lib)
 
+## 🚀 How to Run the Project
+
+Follow these steps to successfully run the entire video analysis pipeline:
+
+---
+
+### 🔧 Step 1: Train the Model (if not already trained)
+
+Before running the analysis, you need to train the detection model (for detecting players, ball, etc.).
+
+You can use any object detection model such as YOLO, Faster R-CNN, or a custom-trained model.
+
+Once trained, save the model weights as a `.pt` file.
+
+For example:
+models/best.pt
+models/last.pt
+
+## 🛠️ Step 2: Project Structure
+project/
+│
+├── models/
+│   └── best.pt                          ← Your trained model
+    └── last.pt         
+│
+├── input_videos/
+│   └── match.mp4                        ← Your raw match footage
+│
+├── output_videos/
+│   └── (will be generated here)
+│
+├── src/
+│   └── (all processing modules)
+│
+├── main.py                              ← Entry point
+└── README.md
+
+
+### 🔧 Step 2: Run the Analysis Pipeline
+python main.py
