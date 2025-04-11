@@ -63,18 +63,12 @@ models/last.pt
 ## Step 2: Put the trained models in models folder
 project/
 │
-├── models/
-│   └── best.pt                          
-    └── last.pt         
-
-
+├── models/ best.pt, last.pt
+    
 ### Step 3: Put the input video in input_videos folder
 python main.py
 
-├── input_videos/
-│   └── input_video.mp4  
+├── input_videos/input_video.mp4  
 
-### 🔧 Step 3: Run the Analysis Pipeline
+### Step 4: Run the Analysis Pipeline
 python main.py
-
-football-video-analysis/ │ ├── input_videos/ # Input raw match videos │ └── match.mp4 │ ├── models/ # Trained model weights │ └── player_ball_detection.pt │ ├── output_videos/ # Final output with annotations │ └── annotated_output.mp4 │ ├── src/ # All core processing modules │ ├── detection/ # Object detection logic │ ├── interpolation/ # Ball position interpolation │ ├── assignment/ # Player-ball possession logic │ ├── camera_motion/ # Camera movement estimation │ ├── perspective/ # View transformation logic │ ├── analytics/ # Speed & distance calculator │ └── utils.py # Helper functions (distance, center, etc.) │ ├── stubs/ # Optional pickled data for debugging │ ├── main.py # Main runner script ├── requirements.txt # Python dependencies └── README.md # Project documentation
