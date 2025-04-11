@@ -60,15 +60,11 @@ For example:
 models/best.pt
 models/last.pt
 
-## Step 2: Put the trained models in models folder
-project/
-│
-├── models/ best.pt, last.pt
     
-### Step 3: Put the input video in input_videos folder
+### Step 2: Put the input video in input_videos folder
 python main.py
 
 ├── input_videos/input_video.mp4  
 
-### Step 4: Run the Analysis Pipeline
+### Step 3: Run the Analysis Pipeline
 python main.py
